@@ -1,0 +1,215 @@
+<html>
+<head>
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="logo.png">
+        <header>Formulario de planes</header>
+        <form action="#">
+            <div class="form first">
+                <div class="details persona">
+                    <span class="title">Informacion Personal</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Cedula</label>
+                            <input id="[@Cedula_var@]" value="[@Cedula_value@]" placeholder="Ingrese Cedula" required></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nombres</label>
+                            <input id="[@Nombre_var@]" value="[@Nombre_value@]" placeholder="Ingrese Nombre" required></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Apellidos</label>
+                            <input id="[@Apellido_var@]" value="[@Apellido_value@]" placeholder="Ingrese Apellido" required></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Telefono</label>
+                            <input id="[@Telefono_var@]" value="[@Telefono_value@]" placeholder="Ingrese Telefono" required></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Correo</label>
+                            <input id="[@Correo_var@]" value="[@Correo_value@]" placeholder="Ingrese Correo" required></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Ciudad</label>
+                            <input id="[@Ciudad_var@]" value="[@Ciudad_value@]" placeholder="Ingrese Ciudad" required></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Direccion</label>
+                            <input id="[@Direccion_var@]" value="[@Direccion_value@]" placeholder="Ingrese Direccion" required></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="details tigo">
+                    <span class="title">Informacion Tigo</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <label>Usuario Tigo</label>
+                            <input id="[@Usuariotigo_var@]" value="[@Usuariotigo_value@]"></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Tipo plan</label>
+                            <input id="[@Tipoplan_var@]" value="[@Tipoplan_value@]"></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Portabilidad</label>
+                            <input id="[@Portabilidad_var@]" value="[@Portabilidad_value@]"></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Numero Portabilidad</label>
+                            <input id="[@NumeroPorta_var@]" value="[@NumeroPorta_value@]" placeholder="Ingrese Numero" required></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Referido</label>
+                            <input id="[@Referido_var@]" value="[@Referido_value@]"></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Numero Referido</label>
+                            <input id="[@NumeroReferido_var@]" value="[@NumeroReferido_value@]"></input>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Fecha</label>
+                            <input type="date" id="[@Fecha_var@]" value="[@Fecha_value@]" size=0></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="details observaciones">
+                    <span class="title">Observaciones del cliente</span>
+
+                    <div class="fields">
+
+                        <div class="input-field">
+                            <input id="[@Observacion_var@]" value="[@Observacion_value@]" size=200></input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<style type="text/css">
+    /* Import Google font - Poppins */
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+    body{
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url(fondo.jpg);  
+    }
+    .logo{
+        width: 100px;
+        height: 50px;
+    }
+    .container{
+        position: relative;
+        max-width: 1200px;
+        width: 100%;
+        border-radius: 6px;
+        padding: 30px;
+        margin: 0 15px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        
+    }
+    .container header{
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+    }
+    .container header::before{
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        height: 3px;
+        width: 27px;
+        border-radius: 8px;
+        background-color: #4070f4;
+    }
+    .container form{
+        position: relative;
+        margin-top: 16px;
+        min-height: 600px;
+        background-color: #fff;
+    }
+    .container form .details{
+        margin-top: 30px;
+
+    }
+    .container form .details.tigo{
+        margin-top: 10px;
+
+    }
+    .container form .details.observaciones{
+        margin-top: 10px;
+
+    }
+    .container form .title{
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 6px 0;
+        color: #333;
+    }
+    .container form .fields{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    form .fields .input-field{
+        display: flex;
+        width: calc(100% / 3 - 15px);
+        flex-direction: column;
+        margin: 4px 0;
+    }
+    .input-field label{
+        font-size: 12px;
+        font-weight: 500;
+        color: #2e2e2e;
+    }
+    .input-field input{
+        outline: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        padding: 0 15px;
+        height: 42px;
+        margin: 8px 0;
+    }
+    .input-field input:is(:focus, :valid){
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+    }
+    .input-field input[type="date"]{
+        color: #707070;
+    }
+    .input-field input[type="date"]:valid{
+        color: #333;
+    }
+</style>
+</html>
